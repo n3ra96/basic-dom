@@ -136,6 +136,33 @@
 //Exercise 4 - Form
 
 
-    
+
+
+// console.log("@@@@@@ " + money)
+// console.log("@@@@@@ " + date)
+// console.log("@@@@@@ " + mobile)
+
+function validate(){
+    const fname = document.getElementById("myname").value;
+    console.log("@@@@@@ " + fname)
+
+    let money = document.getElementById("salary").value;
+    const date = document.getElementById("birthday").value;
+    const mobile = document.getElementById("phone").value;
+    const errorMsg = document.getElementById("error-message")
+    if( money <= 10000 && money >= 16000){
+        return false
+    }
+    if( fname <= 2){
+        return false
+    }
+    if( date == null){
+        return false
+    }
+    if( mobile.length != 10){
+        return false
+    }
+    return true
+}
     
 
