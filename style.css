@@ -72,3 +72,15 @@ body{
 .arrow:active{
     background-color: #7f8c8d
 }
+.my-subHeader{
+  font-style: italic;
+  color: red;
+}
+
+#box{
+    background-color: #1abc9c;
+    line-height:20px;
+    text-align:middle;
+    width: 150px;
+    padding: 20px;
+  }
