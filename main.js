@@ -31,17 +31,17 @@
 
 /////9
 
-// const header = document.createElement("h1")
-// header.innerHTML = "The Best Game Ever"
-// header.style.color = "#c0392b"
-// header.style.fontFamily = "Helvetica"
-// document.body.appendChild(header)
-// header.setAttribute("class", "my-header")
+// const box = document.createElement("h1")
+// box.innerHTML = "The Best Game Ever"
+// box.style.color = "#c0392b"
+// box.style.fontFamily = "Helvetica"
+// document.body.appendChild(box)
+// box.setAttribute("class", "my-box")
 
-// const subHeader = document.createElement("h2")
-// subHeader.innerHTML = "Created by me"
-// subHeader.setAttribute("class", "my-subHeader")
-// document.body.appendChild(subHeader)
+// const subbox = document.createElement("h2")
+// subbox.innerHTML = "Created by me"
+// subbox.setAttribute("class", "my-subbox")
+// document.body.appendChild(subbox)
 
 
 
@@ -72,11 +72,70 @@
 
 ///14. Events II
 
-const box = document.createElement("div") // dynamically creating an element
+// const box = document.createElement("div") // dynamically creating an element
 
-box.setAttribute("class", "box")
-box.onclick = function(){       // adding an event to the new element
-    box.innerHTML = "I'm alive!"
-}
+// box.setAttribute("class", "box")
+// box.onclick = function(){       // adding an event to the new element
+//     box.innerHTML = "I'm alive!"
+// }
 
-document.getElementById("some-id").appendChild(box) // now the box will be on the page, and will react to a click!
+// document.getElementById("some-id").appendChild(box) // now the box will be on the page, and will react to a click!
+
+
+// Exercise 2
+
+
+// const reservations = {
+//     Bob: { claimed: false },
+//     Ted: { claimed: true }
+//   }
+  
+//   function checkReservation(){
+//    const name = document.getElementById("client").value
+//    let lowername = name.toLowerCase()
+//    let keys = Object.keys(reservations)
+
+//     for( let key in keys){
+//         if ( keys[key].toLowerCase() == lowername){
+//             lowername = keys[key]
+//         }
+//     }
+    
+//     if ( lowername in reservations  ){
+//         if( reservations[lowername].claimed == false ){
+//             alert(`Welcome, ${lowername}`)
+//         }else{
+//             alert('Hmm, someone already claimed this reservation')
+//         }
+
+//     }else{
+//         alert('You have no reservation')
+//         reservations[name] = {claimed: false}
+
+//     }
+//   }
+
+
+// Exercise 3
+
+
+// for(let i = 0 ; i < 50; i++){
+//     const box = document.createElement("div")
+//     box.setAttribute("class", "box")
+//     document.getElementById("container").appendChild(box)
+//     box.onmouseleave = function () {
+//         const niceColors = ["#8e44ad", "#3498db", "#c0392b", "#f1c40f", "#d35400", "#2ecc71", "#1abc9c", "#2c3e50", "#7f8c8d"]
+    
+//     const randomPosition = Math.floor(Math.random() * niceColors.length);
+//     box.style.backgroundColor = niceColors[randomPosition];
+//   }
+
+// }
+
+
+//Exercise 4 - Form
+
+
+    
+    
+
