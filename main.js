@@ -91,26 +91,26 @@
 //   }
   
 //   function checkReservation(){
-//    const name = document.getElementById("client").value
-//    let lowername = name.toLowerCase()
+//    const fname = document.getElementById("client").value
+//    let lowerfname = fname.toLowerCase()
 //    let keys = Object.keys(reservations)
 
 //     for( let key in keys){
-//         if ( keys[key].toLowerCase() == lowername){
-//             lowername = keys[key]
+//         if ( keys[key].toLowerCase() == lowerfname){
+//             lowerfname = keys[key]
 //         }
 //     }
     
-//     if ( lowername in reservations  ){
-//         if( reservations[lowername].claimed == false ){
-//             alert(`Welcome, ${lowername}`)
+//     if ( lowerfname in reservations  ){
+//         if( reservations[lowerfname].claimed == false ){
+//             alert(`Welcome, ${lowerfname}`)
 //         }else{
 //             alert('Hmm, someone already claimed this reservation')
 //         }
 
 //     }else{
 //         alert('You have no reservation')
-//         reservations[name] = {claimed: false}
+//         reservations[fname] = {claimed: false}
 
 //     }
 //   }
@@ -143,26 +143,53 @@
 // console.log("@@@@@@ " + mobile)
 
 function validate(){
-    const fname = document.getElementById("myname").value;
-    console.log("@@@@@@ " + fname)
+    const fname = document.getElementById("name").value;
+    const fnameError = document.getElementById("nameError");
+    fnameError.innerHTML = "";
+
 
     let money = document.getElementById("salary").value;
+    const moneyError = document.getElementById("salaryError");
+    moneyError.innerHTML = "";
+    
     const date = document.getElementById("birthday").value;
+    const dateError = document.getElementById("birthdayError");
+    dateError.innerHTML = "";
+    
     const mobile = document.getElementById("phone").value;
-    const errorMsg = document.getElementById("error-message")
-    if( money <= 10000 && money >= 16000){
-        return false
+    const mobileError = document.getElementById("phoneError");
+    mobileError.innerHTML = "";
+    
+    
+    
+    
+
+    if (fname.length == "") {
+        fnameError.innerHTML = '<div style="margin-left: 20px;"> Empty field!</div>';
     }
-    if( fname <= 2){
-        return false
+    if (fname.length != "" && fname.length <= 2) {
+        fnameError.innerHTML = '<div style="margin-left: 20px;"> your fname must be at least 2 characters</div>';
+        // return;
     }
-    if( date == null){
-        return false
+    if (money.length == "") {
+        moneyError.innerHTML = '<div style="margin-left: 20px;"> Empty field!</div>';
     }
-    if( mobile.length != 10){
-        return false
+    if (money.length != "" && (money < 10000 || money > 16000)) {
+        moneyError.innerHTML = '<div style="margin-left: 20px;"> money should be between 10,000 and 16,000</div>';
+        // return;
     }
-    return true
+    if (date === "") {
+        dateError.innerHTML = '<div style="margin-left: 20px;"> date should not be empty</div>';
+    }
+    if (mobile.length == "") {
+        mobileError.innerHTML = '<div style="margin-left: 20px;"> Empty field!</div>';
+    }
+    if (mobile.length != "" && (mobile < 10)) {
+        mobileError.innerHTML = '<div style="margin-left: 20px;"> mobile number should be at least 10 digits</div>';
+    }
+    if (fnameError.innerHTML === "" && moneyError.innerHTML === "" && mobileError.innerHTML === "" && dateError.innerHTML === "") {
+        alert("Form submitted successfully!");
+    }
 }
     
 

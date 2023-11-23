@@ -33,16 +33,31 @@
 
 
     <div id="form"> 
-        <p>Name</p>
-        <input type="text" id="myname"> 
-        <p>Desired salary</p>
-        <input type="number"   id="salary" > 
-        <p>Birthday</p>
-        <input type="date"   id="birthday" > 
-        <p>Phone</p>
-        <input type="number"   id="phone" > 
-        <div id="error-message" ></div>
-        <input class="Submit" onclick="validate()" type="button" value="Submit" >
+        
+        <label for="name">Name</label>
+        <input type="text" id="name" required>
+        <span id="nameError" class="error-message"></span>
+
+        
+         
+        <label for="salary">Salary</label>
+        <input type="number" id="salary" required>
+        <span id="salaryError" class="error-message"></span>
+
+        
+         
+        <label for="birthday">Birthday</label>
+        <input type="date" id="birthday" required>
+        <span id="birthdayError" class="error-message"></span>
+
+         
+ 
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" required>
+        <span id="phoneError" class="error-message"></span>
+
+        <!-- <button type="button" onclick="validate()" style="font-family: Verdana; float: right; margin-right: 10px;">Submit</button> -->
+        <input class="Submit" onclick="validate()" type="button" value="Submit" style="font-family: Verdana; float: right; margin-right: 30px; width: 100px; margin-top: 40px;">
       </div>
 
 
